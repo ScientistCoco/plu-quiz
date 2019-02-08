@@ -1,0 +1,67 @@
+@mixin backgroundImage {
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex: 0.5;
+    height: 50%;
+}
+
+.Card {
+    background-color: lightcoral;
+    height: 300px;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    
+    .card-image {
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #common-fruit {         
+            @include backgroundImage(); 
+            background-image: url(../../img/common_fruits.png);
+        }
+
+        #common-vegetables {
+            @include backgroundImage();
+            background-image: url(../../img/common_vegetables.png);
+        }
+
+        #herbs {
+            @include backgroundImage();
+            background-image: url(../../img/herbs.png);
+        }
+        
+        #potatoes {
+            @include backgroundImage();
+            background-image: url(../../img/potatoes.png);
+        }
+                
+        #tomatoes {
+            @include backgroundImage();
+            background-image: url(../../img/tomatoes.png);
+        }
+
+        #beans {
+            @include backgroundImage();
+            background-image: url(../../img/beans.png);
+        }
+
+        #squash {
+            @include backgroundImage();
+            background-image: url(../../img/squash.png);
+        }
+    }
+
+    .card-content {
+        background-color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 0.5;
+        padding: 0 20px;        
+    }
+}
