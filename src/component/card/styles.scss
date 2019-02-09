@@ -6,20 +6,48 @@
 }
 
 .Card {
-    background-color: lightcoral;
     height: 300px;
     width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
+    font-weight: bold;
     
+    &.common-fruit {
+        background-color: #F2C84C;
+    }
+
+    &.common-vegetables {
+        background-color: #6AADF8;
+    }
+
+    &.herbs {
+        background-color: #60CB9D;
+    }
+
+    &.potatoes {
+        background-color: #C0E45F;
+    }
+
+    &.tomatoes {
+        background-color: #804E27;
+    }
+
+    &.beans {
+        background-color: #EA5757;
+    }
+
+    &.squash {
+        background-color: #EC9941;
+    }
+
     .card-image {
         flex: 2;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        #common-fruit {         
+        #common-fruit {       
             @include backgroundImage(); 
             background-image: url(../../img/common_fruits.png);
         }
@@ -63,5 +91,21 @@
         justify-content: space-between;
         flex: 0.5;
         padding: 0 20px;        
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .Card {
+        height: 80px;
+        flex-direction: row;
+    
+        .card-image {
+            flex: 0.5;
+        }
+    
+        .card-content {
+            background-color: transparent;
+            flex: 1;
+        }
     }
 }

@@ -8,7 +8,16 @@ export class Home extends React.Component {
         return (
             <div className="Home">
                 <nav><p>Home</p></nav>
-                <Card/>
+                <div className="content">
+                    <Card type="Common fruits" image="common-fruit"/>
+                    <Card type="Common vegetables" image="common-vegetables"/>
+                    <Card type="Tomatoes" image="tomatoes"/>                    
+                    <Card type="Potatoes" image="potatoes"/>
+                    <Card type="Herbs" image="herbs"/>
+                    <Card type="Beans" image="beans"/>
+                    <Card type="Squash" image="squash"/>
+                    <div className="Card" style={{backgroundColor: 'transparent', boxShadow: 'none'}}/>
+                </div>
             </div>
         )
     }

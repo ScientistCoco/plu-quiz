@@ -16,4 +16,24 @@
             padding: 0 30px;
         }
     }
+
+    .content {
+        display: flex;   
+        flex-wrap: wrap;  
+        justify-content: center; 
+       
+        .Card {
+            margin: 10px 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .Home {
+        .content {
+            .Card:last-child {
+                display: none;
+            }
+        }
+    }
 }
