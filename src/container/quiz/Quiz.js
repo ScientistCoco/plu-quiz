@@ -1,13 +1,22 @@
 import React from "react";
+import { connect } from "react-redux";
 
-import { ASPARAGUS, BUTTER_BEAN } from "../../items";
+import { COMMON_VEGETABLES } from "../../items";
 import "./styles.scss";
+import { getQuizResults } from "../../actions";
 
-export class Quiz extends React.Component {
+// TODO: 
+// 1. Add focus to the input element when page finishes loading
+
+export class ConnectedQuiz extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            input: ''
+            input: '',
+            questions: [],
+            incorrectQuestions: [],
+            currentQuestion: 0,
+            score: 0,
         }
     }
 
@@ -35,19 +44,54 @@ export class Quiz extends React.Component {
         })
     }
 
-    submit = () => {
-        console.log("Submit answer");
+    handleChange = (e) => {             
         this.setState({
-            input: ''
+            input: e.target.value
         })
+    }
+
+    submit = () => {        
+        var correctAns = this.state.questions[this.state.currentQuestion].plu
+        var nextNumber = ++this.state.currentQuestion;
+        var { incorrectQuestions, score, input } = this.state;
+
+        if (input == correctAns) {
+            ++score;
+        } else { 
+            incorrectQuestions.push(correctAns)
+        }
+
+        this.setState({
+            currentQuestion: nextNumber,
+            incorrectQuestions: incorrectQuestions,
+            score: score
+        })
+
+        if (nextNumber == this.state.questions.length) {
+            this.props.getQuizResults({score: score, incorrectQuestions: incorrectQuestions, 
+                totalQuestions: this.state.questions.length});
+        }
+        
+        this.clearInput();
+    }
+
+    generateQuestionOrder = () => {   
+        this.setState({
+            questions: COMMON_VEGETABLES,
+            lastQuestion: COMMON_VEGETABLES.length
+        })
+    }
+
+    componentWillMount() {
+        this.generateQuestionOrder();
     }
 
     render() {
         return (
             <div className="Quiz">
                 <nav><p>Quiz</p></nav>
-                <img src={ASPARAGUS.src}/>
-                <input value={this.state.input}/>
+                <img src={this.state.questions[this.state.currentQuestion].src}/>
+                <input value={this.state.input} onChange={this.handleChange} type="number"/>
                 <div className="keypad">
                     {this.renderKeypad(0, 2)}
                     {this.renderKeypad(3, 5)}
@@ -62,3 +106,12 @@ export class Quiz extends React.Component {
         )
     }
 }
+
+
+function mapDispatchToProps(dispatch) {
+    return {
+        getQuizResults: results => dispatch(getQuizResults(results))
+    };
+}
+
+export const Quiz = connect(null, mapDispatchToProps) (ConnectedQuiz);
