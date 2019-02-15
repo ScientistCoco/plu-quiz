@@ -5,9 +5,6 @@ import { COMMON_VEGETABLES } from "../../items";
 import "./styles.scss";
 import { getQuizResults } from "../../actions";
 
-// TODO: 
-// 1. Add focus to the input element when page finishes loading
-
 export class ConnectedQuiz extends React.Component {
     constructor(props) {
         super(props);
@@ -18,6 +15,7 @@ export class ConnectedQuiz extends React.Component {
             currentQuestion: 0,
             score: 0,
         }
+        this.inputEl = React.createRef();
     }
 
     renderKeypad(start, end) {
@@ -44,21 +42,27 @@ export class ConnectedQuiz extends React.Component {
         })
     }
 
-    handleChange = (e) => {             
+    handleChange = (e) => {     
         this.setState({
             input: e.target.value
         })
     }
 
+    handleKeyPress = (e) => {
+        if (e.key === "Enter") {
+            this.submit();
+        }
+    }
+
     submit = () => {        
-        var correctAns = this.state.questions[this.state.currentQuestion].plu
+        var correctAns = this.state.questions[this.state.currentQuestion]
         var nextNumber = ++this.state.currentQuestion;
         var { incorrectQuestions, score, input } = this.state;
 
-        if (input == correctAns) {
+        if (input == correctAns.plu) {
             ++score;
         } else { 
-            incorrectQuestions.push(correctAns)
+            incorrectQuestions.push(`${correctAns.plu} - ${correctAns.name}`)
         }
 
         this.setState({
@@ -73,6 +77,7 @@ export class ConnectedQuiz extends React.Component {
         }
         
         this.clearInput();
+        this.inputEl.current.focus();
     }
 
     generateQuestionOrder = () => {   
@@ -91,7 +96,10 @@ export class ConnectedQuiz extends React.Component {
             <div className="Quiz">
                 <nav><p>Quiz</p></nav>
                 <img src={this.state.questions[this.state.currentQuestion].src}/>
-                <input value={this.state.input} onChange={this.handleChange} type="number"/>
+                <input autoFocus={true} ref={this.inputEl} value={this.state.input} 
+                    onChange={this.handleChange} type="number"
+                    onKeyPress={this.handleKeyPress}
+                    />
                 <div className="keypad">
                     {this.renderKeypad(0, 2)}
                     {this.renderKeypad(3, 5)}
