@@ -101,7 +101,7 @@ export class ConnectedQuiz extends React.Component {
     }
 
     generateQuestionOrder = () => {   
-        var temp = COMMON_VEGETABLES;
+        var temp = this.props.questionDeck;
         for (let i = temp.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [temp[i], temp[j]] = [temp[j], temp[i]];
@@ -144,6 +144,11 @@ export class ConnectedQuiz extends React.Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        questionDeck: state.questionDeck
+    };
+};
 
 function mapDispatchToProps(dispatch) {
     return {
@@ -151,4 +156,4 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-export const Quiz = connect(null, mapDispatchToProps) (ConnectedQuiz);
+export const Quiz = connect(mapStateToProps, mapDispatchToProps) (ConnectedQuiz);
