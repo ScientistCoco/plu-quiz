@@ -14,6 +14,8 @@ export class ConnectedQuiz extends React.Component {
             incorrectQuestions: [],
             currentQuestion: 0,
             score: 0,
+            attempts: 0,
+            shake: false,
         }
         this.inputEl = React.createRef();
     }
@@ -54,21 +56,39 @@ export class ConnectedQuiz extends React.Component {
         }
     }
 
+    handleIncorrectAnswer = () => {
+        this.setState({
+            shake: true
+        })
+
+        setTimeout(() => {
+            this.setState({shake: false});
+        }, 200)
+    }
+
     submit = () => {        
         var correctAns = this.state.questions[this.state.currentQuestion]
         var nextNumber = ++this.state.currentQuestion;
-        var { incorrectQuestions, score, input } = this.state;
+        var { incorrectQuestions, score, input, attempts } = this.state;
 
         if (input == correctAns.plu) {
             ++score;
-        } else { 
-            incorrectQuestions.push(`${correctAns.plu} - ${correctAns.name}`)
+        } 
+        else if (attempts === 2) {
+            incorrectQuestions.push(`${correctAns.plu} - ${correctAns.name}`);
+            attempts = 0;
+            this.handleIncorrectAnswer();
+        } else {
+            --nextNumber;
+            ++attempts;            
+            this.handleIncorrectAnswer();
         }
 
         this.setState({
             currentQuestion: nextNumber,
             incorrectQuestions: incorrectQuestions,
-            score: score
+            score: score,
+            attempts: attempts
         })
 
         if (nextNumber == this.state.questions.length) {
@@ -81,9 +101,15 @@ export class ConnectedQuiz extends React.Component {
     }
 
     generateQuestionOrder = () => {   
+        var temp = COMMON_VEGETABLES;
+        for (let i = temp.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [temp[i], temp[j]] = [temp[j], temp[i]];
+        }
+
         this.setState({
-            questions: COMMON_VEGETABLES,
-            lastQuestion: COMMON_VEGETABLES.length
+            questions: temp,
+            lastQuestion: temp.length
         })
     }
 
@@ -94,8 +120,11 @@ export class ConnectedQuiz extends React.Component {
     render() {
         return (
             <div className="Quiz">
-                <nav><p>Quiz</p></nav>
-                <img src={this.state.questions[this.state.currentQuestion].src}/>
+                <nav>
+                    <p>Quiz</p>
+                    <p>{this.state.currentQuestion} / {this.state.questions.length}</p>
+                </nav>
+                <img className={this.state.shake ? "shake" : ""} src={this.state.questions[this.state.currentQuestion].src}/>
                 <input autoFocus={true} ref={this.inputEl} value={this.state.input} 
                     onChange={this.handleChange} type="number"
                     onKeyPress={this.handleKeyPress}

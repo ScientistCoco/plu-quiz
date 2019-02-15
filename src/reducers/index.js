@@ -1,7 +1,7 @@
 import { START_QUIZ, GET_QUIZ_RESULTS, GO_TO_START } from "../actions";
 
 const initialState = {
-    page: "Score",
+    page: "Home",
     quiz: "",
     score: 0,
     totalQuestions: 0,

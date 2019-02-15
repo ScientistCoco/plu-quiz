@@ -3,6 +3,13 @@
     flex-direction: column;
     align-items: center;
 
+    img.shake {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+        transform: translate3d(0, 0, 0);
+        backface-visibility: hidden;
+        perspective: 1000px;
+    }
+
     nav {
         background-color: #3F51B5;
         width: 100vw;
@@ -16,6 +23,11 @@
             font-weight: bold;
             margin: 0;
             padding: 0 30px;
+            cursor: context-menu;
+        }
+
+        p:first-child {
+            flex: 1;            
         }
     }
 
@@ -24,6 +36,24 @@
         width: 260px;
         margin: 20px 0;
         font-size: 1.2em;
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
     }
 }
 
