@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/plu-quiz/static/media/3212.44fd7e19.png"
   },
   {
-    "revision": "250e463336744cdc7d97",
+    "revision": "9c6b80d158eb93ee9aeb",
     "url": "/plu-quiz/static/css/main.5e2fcabc.chunk.css"
   },
   {
@@ -212,8 +212,8 @@ self.__precacheManifest = [
     "url": "/plu-quiz/static/media/3161.99906de2.png"
   },
   {
-    "revision": "250e463336744cdc7d97",
-    "url": "/plu-quiz/static/js/main.250e4633.chunk.js"
+    "revision": "9c6b80d158eb93ee9aeb",
+    "url": "/plu-quiz/static/js/main.9c6b80d1.chunk.js"
   },
   {
     "revision": "f3e94b9b89faf3ffd7e8b05fb9c392ee",
@@ -396,10 +396,6 @@ self.__precacheManifest = [
     "url": "/plu-quiz/static/media/common_vegetables.ca9fa280.png"
   },
   {
-    "revision": "35633e108ea76edd1d169f3e5bdcb71d",
-    "url": "/plu-quiz/static/media/Bok_choy.35633e10.png"
-  },
-  {
     "revision": "7b7164341c8fcc5f285697b290ec3c3d",
     "url": "/plu-quiz/static/media/herbs.7b716434.png"
   },
@@ -416,11 +412,15 @@ self.__precacheManifest = [
     "url": "/plu-quiz/static/media/squash.d5689bdb.png"
   },
   {
+    "revision": "35633e108ea76edd1d169f3e5bdcb71d",
+    "url": "/plu-quiz/static/media/Bok_choy.35633e10.png"
+  },
+  {
     "revision": "69395efa9fb0395dd3f40aba0448b88e",
     "url": "/plu-quiz/static/media/healthy-food.69395efa.png"
   },
   {
-    "revision": "b046c3395770c4227e1fdec80a44a81c",
+    "revision": "aa6011480e37d6490f89ca8cf2dcc05e",
     "url": "/plu-quiz/index.html"
   }
 ];
