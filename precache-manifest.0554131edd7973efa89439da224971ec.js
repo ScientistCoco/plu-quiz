@@ -388,8 +388,8 @@ self.__precacheManifest = [
     "url": "/static/media/72981.92fe78e3.png"
   },
   {
-    "revision": "ca9fa28075e6dbb746fddd2ed7206342",
-    "url": "/static/media/common_vegetables.ca9fa280.png"
+    "revision": "6a02ad2f06d4c82162e4f1702a60c958",
+    "url": "/static/media/common_fruits.6a02ad2f.png"
   },
   {
     "revision": "7b7164341c8fcc5f285697b290ec3c3d",
@@ -400,16 +400,16 @@ self.__precacheManifest = [
     "url": "/static/media/potatoes.e9688b7d.png"
   },
   {
-    "revision": "6a02ad2f06d4c82162e4f1702a60c958",
-    "url": "/static/media/common_fruits.6a02ad2f.png"
-  },
-  {
-    "revision": "35633e108ea76edd1d169f3e5bdcb71d",
-    "url": "/static/media/Bok_choy.35633e10.png"
+    "revision": "ca9fa28075e6dbb746fddd2ed7206342",
+    "url": "/static/media/common_vegetables.ca9fa280.png"
   },
   {
     "revision": "c8092b3b6ad5fd7840ec3b7f0b8ea8b0",
     "url": "/static/media/beans.c8092b3b.png"
+  },
+  {
+    "revision": "35633e108ea76edd1d169f3e5bdcb71d",
+    "url": "/static/media/Bok_choy.35633e10.png"
   },
   {
     "revision": "d5689bdb41fead4cbb047dca843223c7",
@@ -420,7 +420,7 @@ self.__precacheManifest = [
     "url": "/static/media/healthy-food.69395efa.png"
   },
   {
-    "revision": "bf1d56e111db180da562640fac6af20b",
+    "revision": "6f9528e48ae1c6d7f3279faeece89e97",
     "url": "/index.html"
   }
 ];
