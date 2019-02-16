@@ -1,7 +1,7 @@
 {
   "main.css": "/plu-quiz/static/css/main.5e2fcabc.chunk.css",
-  "main.js": "/plu-quiz/static/js/main.2f969c52.chunk.js",
-  "main.js.map": "/plu-quiz/static/js/main.2f969c52.chunk.js.map",
+  "main.js": "/plu-quiz/static/js/main.250e4633.chunk.js",
+  "main.js.map": "/plu-quiz/static/js/main.250e4633.chunk.js.map",
   "static/js/1.df3ffaae.chunk.js": "/plu-quiz/static/js/1.df3ffaae.chunk.js",
   "static/js/1.df3ffaae.chunk.js.map": "/plu-quiz/static/js/1.df3ffaae.chunk.js.map",
   "runtime~main.js": "/plu-quiz/static/js/runtime~main.3299845e.js",
@@ -99,10 +99,10 @@
   "static/media/40715.png": "/plu-quiz/static/media/40715.cf281f9f.png",
   "static/media/41015.png": "/plu-quiz/static/media/41015.f1040c6d.png",
   "static/media/72981.png": "/plu-quiz/static/media/72981.92fe78e3.png",
-  "static/media/styles.scss": "/plu-quiz/static/media/beans.c8092b3b.png",
+  "static/media/styles.scss": "/plu-quiz/static/media/squash.d5689bdb.png",
   "static/media/healthy-food.png": "/plu-quiz/static/media/healthy-food.69395efa.png",
   "static/css/main.5e2fcabc.chunk.css.map": "/plu-quiz/static/css/main.5e2fcabc.chunk.css.map",
   "index.html": "/plu-quiz/index.html",
-  "precache-manifest.2f1d8d94ecef4afde5f75fd47ae414e9.js": "/plu-quiz/precache-manifest.2f1d8d94ecef4afde5f75fd47ae414e9.js",
+  "precache-manifest.c968f04606957686708db18d093fc62b.js": "/plu-quiz/precache-manifest.c968f04606957686708db18d093fc62b.js",
   "service-worker.js": "/plu-quiz/service-worker.js"
 }
