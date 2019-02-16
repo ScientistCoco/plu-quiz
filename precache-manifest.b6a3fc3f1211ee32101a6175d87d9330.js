@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/plu-quiz/static/media/3212.44fd7e19.png"
   },
   {
-    "revision": "9c6b80d158eb93ee9aeb",
+    "revision": "c8ec59e3d3afb9c1340a",
     "url": "/plu-quiz/static/css/main.5e2fcabc.chunk.css"
   },
   {
@@ -212,8 +212,8 @@ self.__precacheManifest = [
     "url": "/plu-quiz/static/media/3161.99906de2.png"
   },
   {
-    "revision": "9c6b80d158eb93ee9aeb",
-    "url": "/plu-quiz/static/js/main.9c6b80d1.chunk.js"
+    "revision": "c8ec59e3d3afb9c1340a",
+    "url": "/plu-quiz/static/js/main.c8ec59e3.chunk.js"
   },
   {
     "revision": "f3e94b9b89faf3ffd7e8b05fb9c392ee",
@@ -392,6 +392,10 @@ self.__precacheManifest = [
     "url": "/plu-quiz/static/media/common_fruits.6a02ad2f.png"
   },
   {
+    "revision": "e9688b7d6748c9bf9ca857a12445e13a",
+    "url": "/plu-quiz/static/media/potatoes.e9688b7d.png"
+  },
+  {
     "revision": "ca9fa28075e6dbb746fddd2ed7206342",
     "url": "/plu-quiz/static/media/common_vegetables.ca9fa280.png"
   },
@@ -400,27 +404,23 @@ self.__precacheManifest = [
     "url": "/plu-quiz/static/media/herbs.7b716434.png"
   },
   {
-    "revision": "e9688b7d6748c9bf9ca857a12445e13a",
-    "url": "/plu-quiz/static/media/potatoes.e9688b7d.png"
-  },
-  {
-    "revision": "c8092b3b6ad5fd7840ec3b7f0b8ea8b0",
-    "url": "/plu-quiz/static/media/beans.c8092b3b.png"
+    "revision": "35633e108ea76edd1d169f3e5bdcb71d",
+    "url": "/plu-quiz/static/media/Bok_choy.35633e10.png"
   },
   {
     "revision": "d5689bdb41fead4cbb047dca843223c7",
     "url": "/plu-quiz/static/media/squash.d5689bdb.png"
   },
   {
-    "revision": "35633e108ea76edd1d169f3e5bdcb71d",
-    "url": "/plu-quiz/static/media/Bok_choy.35633e10.png"
+    "revision": "c8092b3b6ad5fd7840ec3b7f0b8ea8b0",
+    "url": "/plu-quiz/static/media/beans.c8092b3b.png"
   },
   {
     "revision": "69395efa9fb0395dd3f40aba0448b88e",
     "url": "/plu-quiz/static/media/healthy-food.69395efa.png"
   },
   {
-    "revision": "aa6011480e37d6490f89ca8cf2dcc05e",
+    "revision": "df8a3bd0ec89be3fb3c9e8289e4dd961",
     "url": "/plu-quiz/index.html"
   }
 ];
