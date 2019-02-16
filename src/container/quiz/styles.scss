@@ -29,6 +29,10 @@
         p:first-child {
             flex: 1;            
         }
+
+        .home {
+            cursor: pointer;
+        }
     }
 
     input {
@@ -36,6 +40,11 @@
         width: 260px;
         margin: 20px 0;
         font-size: 1.2em;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 }
 
@@ -78,5 +87,11 @@
             border-radius: 5px;
             cursor: pointer;
         }
+    }
+}
+
+@media only screen and (max-width: 1026px) {
+    img {
+        width: 45vw;
     }
 }

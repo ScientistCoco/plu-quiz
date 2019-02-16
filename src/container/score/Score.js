@@ -19,6 +19,10 @@ export class ConnectedScore extends React.Component {
     }
 
     render() {
+        var _tab1Content = this.props.incorrectQuestions.length > 0 ? 
+            ["The following were incorrect:", this.parseIncorrectQuestions()] :
+            "You got all the questions correct, good job!";
+
         return (
             <div className="Score">
                 <nav>
@@ -30,8 +34,8 @@ export class ConnectedScore extends React.Component {
                         imgSrc={require("../../img/Icons/healthy-food.png")}
                         tab0Name="Result"
                         tab1Name="Incorrect questions"
-                        tab0Content={`You got ${this.props.score} out of ${this.props.totalQuestions}`}
-                        tab1Content={["The following were incorrect:", this.parseIncorrectQuestions()]}
+                        tab0Content={`You got ${this.props.score} out of ${this.props.totalQuestions} for ${this.props.quiz}`}
+                        tab1Content={_tab1Content}
                     />
                 </section>
             </div>

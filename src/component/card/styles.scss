@@ -1,7 +1,7 @@
 @mixin backgroundImage {
     background-size: contain;
     background-repeat: no-repeat;
-    flex: 0.5;
+    flex: 0.4;
     height: 50%;
 }
 
@@ -39,6 +39,10 @@
 
     &.squash {
         background-color: #EC9941;
+    }
+
+    &.chinese-vegetables {
+        background-color: lightseagreen;
     }
 
     .card-image {
@@ -81,6 +85,11 @@
             @include backgroundImage();
             background-image: url(../../img/squash.png);
         }
+
+        #chinese-vegetables {
+            @include backgroundImage();
+            background-image: url(../../img/Bok_choy.png);
+        }
     }
 
     .card-content {
@@ -94,7 +103,7 @@
     }
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 1026px) {
     .Card {
         height: 80px;
         flex-direction: row;

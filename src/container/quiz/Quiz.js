@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { COMMON_VEGETABLES } from "../../items";
 import "./styles.scss";
 import { getQuizResults } from "../../actions";
 
@@ -37,6 +36,10 @@ export class ConnectedQuiz extends React.Component {
         var newVal = `${this.state.input ? this.state.input: '' }${e.target.value}`;
         this.setState({input: newVal})
     }
+    
+    handleClickHome() {
+        window.location.reload();
+    }
 
     clearInput = () => {
         this.setState({
@@ -68,16 +71,18 @@ export class ConnectedQuiz extends React.Component {
 
     submit = () => {        
         var correctAns = this.state.questions[this.state.currentQuestion]
-        var nextNumber = ++this.state.currentQuestion;
+        var nextNumber = this.state.currentQuestion + 1;
         var { incorrectQuestions, score, input, attempts } = this.state;
 
-        if (input == correctAns.plu) {
+        if (input === correctAns.plu) {
             ++score;
+            attempts = 0;
         } 
         else if (attempts === 2) {
             incorrectQuestions.push(`${correctAns.plu} - ${correctAns.name}`);
             attempts = 0;
             this.handleIncorrectAnswer();
+            alert(`Correct value is: ${correctAns.plu}`)
         } else {
             --nextNumber;
             ++attempts;            
@@ -91,7 +96,7 @@ export class ConnectedQuiz extends React.Component {
             attempts: attempts
         })
 
-        if (nextNumber == this.state.questions.length) {
+        if (nextNumber === this.state.questions.length) {
             this.props.getQuizResults({score: score, incorrectQuestions: incorrectQuestions, 
                 totalQuestions: this.state.questions.length});
         }
@@ -118,16 +123,19 @@ export class ConnectedQuiz extends React.Component {
     }
 
     render() {
+        var item_name = this.state.questions[this.state.currentQuestion].name;
         return (
             <div className="Quiz">
                 <nav>
                     <p>Quiz</p>
                     <p>{this.state.currentQuestion} / {this.state.questions.length}</p>
+                    <p onClick={this.handleClickHome} class="material-icons home">home</p>
                 </nav>
                 <img className={this.state.shake ? "shake" : ""} src={this.state.questions[this.state.currentQuestion].src}/>
                 <input autoFocus={true} ref={this.inputEl} value={this.state.input} 
                     onChange={this.handleChange} type="number"
                     onKeyPress={this.handleKeyPress}
+                    placeholder={item_name}
                     />
                 <div className="keypad">
                     {this.renderKeypad(0, 2)}

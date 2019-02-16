@@ -1,5 +1,5 @@
 import { START_QUIZ, GET_QUIZ_RESULTS, GO_TO_START } from "../actions";
-import { BEANS, COMMON_VEGETABLES, CHINESE_VEGETABLES, TOMATOES } from "../items";
+import { BEANS, COMMON_FRUITS, COMMON_VEGETABLES, CHINESE_VEGETABLES, HERBS, POTATOES, SQUASH, TOMATOES } from "../items";
 
 const initialState = {
     page: "Home",
@@ -12,14 +12,24 @@ const initialState = {
 
 function getQuizQuestions(type) {
     switch(type) {
-        case "Common vegetables": 
-            return COMMON_VEGETABLES;
         case "Beans": 
             return BEANS;
-        case "Tomatoes":
-            return TOMATOES
         case "Chinese vegetables":
             return CHINESE_VEGETABLES
+        case "Common fruits":
+            return COMMON_FRUITS
+        case "Common vegetables": 
+            return COMMON_VEGETABLES;
+        case "Herbs":
+            return HERBS;
+        case "Potatoes":
+            return POTATOES;
+        case "Squash":
+            return SQUASH;
+        case "Tomatoes":
+            return TOMATOES
+        default:
+            return;
     }
 }
 

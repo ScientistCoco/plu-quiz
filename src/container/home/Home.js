@@ -15,8 +15,8 @@ export class Home extends React.Component {
                     <Card type="Potatoes" image="potatoes"/>
                     <Card type="Herbs" image="herbs"/>
                     <Card type="Beans" image="beans"/>
+                    <Card type="Chinese vegetables" image="chinese-vegetables"/>
                     <Card type="Squash" image="squash"/>
-                    <div className="Card" style={{backgroundColor: 'transparent', boxShadow: 'none'}}/>
                 </div>
             </div>
         )

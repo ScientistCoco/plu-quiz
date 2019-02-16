@@ -16,6 +16,8 @@ export class ConnectedApp extends React.Component {
                 return <Quiz/>
             case(SCORE_PAGE):
                 return <Score/>
+            default:
+                return <Home/>
         }  
     }
 

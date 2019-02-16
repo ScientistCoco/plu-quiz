@@ -5,7 +5,6 @@ import * as serviceWorker from './serviceWorker';
 
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { ASPARAGUS, BUTTER_BEAN } from "./items";
 import { App } from "./App";
 import { startQuiz } from './actions';
 

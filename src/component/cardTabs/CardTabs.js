@@ -1,5 +1,4 @@
 import * as React from "react";
-import Confetti from "react-dom-confetti";
 
 import "./styles.scss";
 
@@ -32,7 +31,7 @@ export class CardTabs extends React.Component {
     }
 
     render() {
-        const { tab0Name, tab1Name, tab0Content, tab1Content } = this.props;
+        const { tab0Name, tab1Name } = this.props;
 
         return (
             <div className="CardTabs">
