@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/static/media/3212.44fd7e19.png"
   },
   {
-    "revision": "33474c672dab5b312a2a",
-    "url": "/static/css/main.f9d009b8.chunk.css"
+    "revision": "59d0e5a8f1bcecad3d32",
+    "url": "/static/css/main.94e7709a.chunk.css"
   },
   {
     "revision": "df3ffaaea83468dd9724",
@@ -212,8 +212,8 @@ self.__precacheManifest = [
     "url": "/static/media/3161.99906de2.png"
   },
   {
-    "revision": "33474c672dab5b312a2a",
-    "url": "/static/js/main.33474c67.chunk.js"
+    "revision": "59d0e5a8f1bcecad3d32",
+    "url": "/static/js/main.59d0e5a8.chunk.js"
   },
   {
     "revision": "f3e94b9b89faf3ffd7e8b05fb9c392ee",
@@ -392,12 +392,12 @@ self.__precacheManifest = [
     "url": "/static/media/common_fruits.6a02ad2f.png"
   },
   {
-    "revision": "7b7164341c8fcc5f285697b290ec3c3d",
-    "url": "/static/media/herbs.7b716434.png"
-  },
-  {
     "revision": "ca9fa28075e6dbb746fddd2ed7206342",
     "url": "/static/media/common_vegetables.ca9fa280.png"
+  },
+  {
+    "revision": "7b7164341c8fcc5f285697b290ec3c3d",
+    "url": "/static/media/herbs.7b716434.png"
   },
   {
     "revision": "e9688b7d6748c9bf9ca857a12445e13a",
@@ -408,19 +408,19 @@ self.__precacheManifest = [
     "url": "/static/media/Bok_choy.35633e10.png"
   },
   {
-    "revision": "c8092b3b6ad5fd7840ec3b7f0b8ea8b0",
-    "url": "/static/media/beans.c8092b3b.png"
-  },
-  {
     "revision": "d5689bdb41fead4cbb047dca843223c7",
     "url": "/static/media/squash.d5689bdb.png"
+  },
+  {
+    "revision": "c8092b3b6ad5fd7840ec3b7f0b8ea8b0",
+    "url": "/static/media/beans.c8092b3b.png"
   },
   {
     "revision": "69395efa9fb0395dd3f40aba0448b88e",
     "url": "/static/media/healthy-food.69395efa.png"
   },
   {
-    "revision": "750be78080cc61f729c899b4365fc5d0",
+    "revision": "80dd214d7bbe3e9525683179de921ced",
     "url": "/index.html"
   }
 ];

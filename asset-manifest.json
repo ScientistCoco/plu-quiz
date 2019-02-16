@@ -1,7 +1,7 @@
 {
-  "main.css": "/static/css/main.f9d009b8.chunk.css",
-  "main.js": "/static/js/main.33474c67.chunk.js",
-  "main.js.map": "/static/js/main.33474c67.chunk.js.map",
+  "main.css": "/static/css/main.94e7709a.chunk.css",
+  "main.js": "/static/js/main.59d0e5a8.chunk.js",
+  "main.js.map": "/static/js/main.59d0e5a8.chunk.js.map",
   "static/js/1.df3ffaae.chunk.js": "/static/js/1.df3ffaae.chunk.js",
   "static/js/1.df3ffaae.chunk.js.map": "/static/js/1.df3ffaae.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -99,10 +99,10 @@
   "static/media/40715.png": "/static/media/40715.cf281f9f.png",
   "static/media/41015.png": "/static/media/41015.f1040c6d.png",
   "static/media/72981.png": "/static/media/72981.92fe78e3.png",
-  "static/media/styles.scss": "/static/media/squash.d5689bdb.png",
+  "static/media/styles.scss": "/static/media/beans.c8092b3b.png",
   "static/media/healthy-food.png": "/static/media/healthy-food.69395efa.png",
-  "static/css/main.f9d009b8.chunk.css.map": "/static/css/main.f9d009b8.chunk.css.map",
+  "static/css/main.94e7709a.chunk.css.map": "/static/css/main.94e7709a.chunk.css.map",
   "index.html": "/index.html",
-  "precache-manifest.ba7cec27513c0b2a47e6da6b3edc8106.js": "/precache-manifest.ba7cec27513c0b2a47e6da6b3edc8106.js",
+  "precache-manifest.e8831f2b255f62b1dc33d729874bbb68.js": "/precache-manifest.e8831f2b255f62b1dc33d729874bbb68.js",
   "service-worker.js": "/service-worker.js"
 }
