@@ -52,43 +52,43 @@
         justify-content: center;
 
         #common-fruit {       
-            @include backgroundImage(); 
-            background-image: url(../../img/common_fruits.png);
+            @include backgroundImage();             
+            background-image: url('./../../img/common_fruits.png');
         }
 
         #common-vegetables {
             @include backgroundImage();
-            background-image: url(../../img/common_vegetables.png);
+            background-image: url('./../../img/common_vegetables.png');
         }
 
         #herbs {
             @include backgroundImage();
-            background-image: url(../../img/herbs.png);
+            background-image: url('./../../img/herbs.png');
         }
         
         #potatoes {
             @include backgroundImage();
-            background-image: url(../../img/potatoes.png);
+            background-image: url('./../../img/potatoes.png');
         }
                 
         #tomatoes {
             @include backgroundImage();
-            background-image: url(../../img/tomatoes.png);
+            background-image: url('./../../img/tomatoes.png');
         }
 
         #beans {
             @include backgroundImage();
-            background-image: url(../../img/beans.png);
+            background-image: url('./../../img/beans.png');
         }
 
         #squash {
             @include backgroundImage();
-            background-image: url(../../img/squash.png);
+            background-image: url('./../../img/squash.png');
         }
 
         #chinese-vegetables {
             @include backgroundImage();
-            background-image: url(../../img/Bok_choy.png);
+            background-image: url('./../../img/Bok_choy.png');
         }
     }
 

@@ -112,6 +112,12 @@ export class ConnectedQuiz extends React.Component {
             [temp[i], temp[j]] = [temp[j], temp[i]];
         }
 
+        temp.forEach(item => {
+            const img = new Image();
+            // trigger download
+            img.src = item.src;
+        })
+
         this.setState({
             questions: temp,
             lastQuestion: temp.length

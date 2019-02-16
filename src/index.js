@@ -6,10 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { App } from "./App";
-import { startQuiz } from './actions';
-
-window.store = store;
-window.startQuiz = startQuiz;
 
 ReactDOM.render(<Provider store={store}><App/></Provider>, document.getElementById('root'));
 

@@ -2,6 +2,7 @@
   "name": "plu-quiz",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://scientistcoco.github.io/plu-quiz/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
